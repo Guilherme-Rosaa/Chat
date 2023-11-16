@@ -1,0 +1,65 @@
+button {
+  background-color: #4CAF50;
+  border: none;
+  border-bottom: 3px solid #357e3d;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.message-sender-right {
+  display: grid;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+.message-sender-left {
+  display: grid;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.message {
+  background-color: #F4F4F4;
+  color: #333;
+  padding: 10px;
+  margin: 1rem 0;
+  border-radius: 10px;
+  max-width: 600px;
+  font-family: Arial, sans-serif;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.send-message{
+  border: none;
+  background-color: #c6ced5;
+  width: 85%;
+  border-radius: 5px;
+  height: 3rem;
+  padding-left: 1rem;
+}
+
+
+.button-down {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}

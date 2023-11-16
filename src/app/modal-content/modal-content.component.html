@@ -1,0 +1,18 @@
+<div style="display: flex;justify-content: center;background-color: aliceblue;">
+  <div *ngIf="!userLog">
+    <h2>Informe seu nome</h2>
+    <form style="display: grid;" (ngSubmit)="onSubmit()" #form="ngForm">
+      <input type="text" name="userName" [(ngModel)]="userName" required>
+      <button style="margin-top: 1rem;margin-bottom: 1rem;" mat-raised-button color="primary" [disabled]="form.invalid">Continuar</button>
+    </form>
+  </div>
+
+  <div *ngIf="userLog">
+    <h2>Escolha um servidor</h2>
+    <ul style="list-style: none;width: 100%;margin: 0;margin-bottom: 1rem;padding: 0;">
+      <li style="width: 100%;margin-top: 1rem;" *ngFor="let server of servers">
+        <button style="width: 100%;" mat-raised-button (click)="onSelectServer(server.name)">{{ server.name }}</button>
+      </li>
+    </ul>
+  </div>
+</div>

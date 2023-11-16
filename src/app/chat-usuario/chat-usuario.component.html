@@ -1,0 +1,31 @@
+<div style="    justify-content: center;
+display: grid;" *ngIf="clientNameSet">
+  <div style="width: 50rem;
+
+  display: grid;">
+    <h2>Chat  {{selectedChannelId}}</h2>
+    <div class="chat-list">
+      <div *ngFor="let message of chatHistory" [ngClass]="{'message-sender-right': clientName == message.sender, 'message-sender-left': clientName != message.sender}">
+        <div
+          [ngClass]="{'message-sender-right': clientName == message.sender, 'message-sender-left': clientName != message.sender}">
+          <div style="font-weight: 800;">
+            {{message.sender}}:
+          </div>
+          <div class="message">
+            {{message.message}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="display: flex;justify-content: space-between; align-items: center;">
+      <input class="send-message" [(ngModel)]="message" (keyup.enter)="sendMessage()" placeholder="Digite uma mensagem" />
+      <button (click)="sendMessage()">Enviar</button>
+    </div>
+
+    <button (click)="logout()">Sair</button>
+  </div>
+
+</div>
+<button class="button-down" *ngIf="showButton" (click)="scrollToBottom()">Ir para o Final</button>
